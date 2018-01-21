@@ -6,7 +6,8 @@ Here are some simple instructions to use the library -
 Use following Javascript code to initialize form to validate HTML Form fields -
 
 ```
-(function () {
+<script>
+    (function () {
         window.validator_options = {
             form_class: 'form-validator',
             default_message: '* Please enter information',
@@ -21,7 +22,10 @@ Use following Javascript code to initialize form to validate HTML Form fields -
             confirm_url_message: '* Please enter only url',
         };
     })();
-  ```
+</script>
+<script type="text/javascript" src="form-validator.js"></script>
+```
+
 `form_class` Object key takes `HTML Form` class name. For example, 
 
 ```
@@ -31,7 +35,7 @@ Use following Javascript code to initialize form to validate HTML Form fields -
 
 You can use multiple Forms's as much as you wish just by adding the Form class name. The library would automatically figure out the field type and generates error messages accordingly.
 
-For validate a specific field just add a field attribute `field-required` -
+For validate a specific field just add a field attribute `field-required` 
 
 ```
 <input type="text" class="form-control" name="firstname" field-required value="">
